@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.demo.dubbo</groupId>
+    <artifactId>springboot2-dubbo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot2-dubbo</name>
+    <description>springboot2-dubbo</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>dubbo-api</module>
+        <module>dubbo-consumer</module>
+        <module>dubbo-provider</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <lombok.version>1.16.20</lombok.version>
+        <web.version>2.0.4.RELEASE</web.version>
+        <dubbo.version>0.2.0</dubbo.version>
+        <spring.boot.start.version>2.3.12.RELEASE</spring.boot.start.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.start.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.start.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
